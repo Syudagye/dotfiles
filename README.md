@@ -4,7 +4,9 @@
 
 ```
 git clone --bare git@gitlab.com:Syudagye/dotfiles.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
+alias config="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+config checkout
+config submodule update
 ```
 
 rofi-power-menu:
