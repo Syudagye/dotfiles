@@ -1,0 +1,35 @@
+format = """
+$time$git_branch$nodejs$python$java$package$cmd_duration
+$username $directory(blue)[❯](bold green) """
+
+[username]
+style_user = "fg:202 bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[time]
+disabled = false
+format = '❯ [$time]($style)'
+time_format = "%T"
+utc_time_offset = "+1"
+# time_range = "10:00:00-14:00:00"
+
+[git_branch]
+format = " ❯ [$symbol$branch](bold red)"
+
+[nodejs]
+format = " ❯ [$symbol$version](bold green)"
+
+[python]
+format = " ❯ [$symbol$version](fg:40)"
+
+[java]
+format = " ❯ [$symbol$version](bold)"
+
+[package]
+format = " ❯ [$symbol$version]($style)"
+
+[cmd_duration]
+format = " ❯ took [$duration]($style)"
