@@ -1,0 +1,60 @@
+* {
+	clr-main: #00ffd157;
+
+	text-color: #fff;
+	background-color: transparent;
+
+	font: "Cantarell 12";
+}
+
+window {
+	background-color: rgba(35, 35, 44, 0.6);
+	width: 700px;
+	padding: 0;
+	y-offset: -250px;
+	anchor: north;
+}
+
+inputbar {
+	padding: 5px 10px;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+prompt {
+	color: #ffffff83;
+}
+
+listview {
+	lines: 15;
+	columns: 1;
+	spacing: 0;
+	padding: 5px;
+	fixed-height: false;
+}
+
+element {
+	padding: 5px;
+	border-radius: 5px;
+}
+element selected{
+	background-color: @clr-main;
+}
+
+element-icon {
+	/* find a way to scale icons */
+}
+
+mode-switcher {
+	padding: 5px;
+}
+
+button {
+	padding: 5px;
+	border-radius: 5px;
+}
+button selected{
+	background-color: @clr-main;
+}
+
+
+/* vim:ft=css
