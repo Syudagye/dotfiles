@@ -56,5 +56,14 @@ button selected{
 	background-color: @clr-main;
 }
 
+message {
+	padding: 5px;
+}
+
+textbox {
+	padding: 5px;
+	border: 3px;
+	border-color: @clr-main;
+}
 
 /* vim:ft=css
