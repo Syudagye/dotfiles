@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # contains icons associated with the class name if a window (format: "CLASS ICON")
 icons=(
@@ -16,53 +16,34 @@ icons=(
 while [ true ];
 do
 	IFS=$'\n'
-	winlist=($(wmctrl -l))
+	winlist=($(wmctrl -l 2>/dev/null))
+	[ $? -ne 0 ] && continue	# Check exit code
 	wslist=($(wmctrl -d))
 	out=""
-	wins=()
 
 	for ws in ${wslist[@]}
 	do
-		if [[ ${ws:3:2} == "* " ]];
-	       	then
-			for win in ${winlist[@]} 
-			do
-				if [[ ${win:12:1} == ${ws:0:1} ]]; 
-				then
-					wins=(${wins[@]} $win)
-				fi
-			done
-		fi
+		[ ${ws:3:2} == "* " ] && index=${ws:0:1} && break 
 	done
-	
-	if [[ ${#wins[@]} == 0 ]];
-	then
-		echo ""
-		continue
-	fi
 
-	for win in ${wins[@]}
+	for win in ${winlist[@]}
 	do
+		[ ${win:12:1} -ne $index ] && continue
+
 		unparsed_classname=$(xprop -id ${win:0:10} WM_CLASS)
 		quotepos=($(echo $unparsed_classname | grep -aob '"' | grep -oE '[0-9]+'))
 		length=$((${quotepos[1]} - ${quotepos[0]} - 1))
 		classname=${unparsed_classname:$((${quotepos[0]} + 1)):$length}
 	
 		ic=""
-	
+
 		for icon in ${icons[@]}
 		do
-			if [[ $classname == ${icon:0:-2} ]];
-			then
-				ic=${icon: -1}
-			fi
+			[ $classname == ${icon:0:-2} ] && ic=${icon: -1} 
 		done
 
-		if [[ $ic == "" ]];
-		then
-			ic="类"
-		fi
-
+		[ ${#ic} -eq 0 ] && ic="类"
+		
 		if [[ ${#wins[@]} -gt 5 ]];
 		then
 			out="$out %{T4}$ic%{T-}	  "
@@ -75,6 +56,6 @@ do
 			out="$out %{T4}$ic%{T-}	 $name	 "
 		fi
 	done
-
-	echo ${out:0:-2}
+	
+	[ ${#out} -ne 0 ] && echo ${out:0:-2} || echo ""
 done
