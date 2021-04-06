@@ -2,8 +2,8 @@ configuration {
 	modi: "drun,run,ssh,window";
 	show-icons: true;
 	terminal: "termite";
-	sidebar-mode: true; /* not sure about this */
 	scroll-method: 1;
-	theme: "theme";
+	theme: "syuTheme";
+	sidebar-mode: true;
 }
 /* vim:ft=css
