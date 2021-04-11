@@ -1,2 +1,8 @@
 [General]
 theme=Lavender-Solid-Kvantum
+
+[Applications]
+Default=virtualboxvm
+KvBlender=virtualboxvm
+KvCyan=virtualboxvm
+Matcha-sea-dark=virtualboxvm
