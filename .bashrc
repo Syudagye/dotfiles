@@ -45,6 +45,8 @@ alias cdshared='cd /mnt/shared'
 alias fixchars='sed -i -e 's/\r$//''
 alias config="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
+alias female=man	# l'inclusivité 
+
 # ---==+==---
 ##  Options
 # ---==+==---
