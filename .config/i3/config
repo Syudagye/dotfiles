@@ -200,7 +200,7 @@ smart_borders no_gaps
 exec feh -z --no-fehbg --bg-fill /usr/share/backgrounds/
 
 # Starting picom compositor
-exec picom --config ~/.config/picom/picom.conf
+exec picom -b --config ~/.config/picom/picom.conf
 
 # Starting notification daemon
 exec deadd-notification-center
