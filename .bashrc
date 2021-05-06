@@ -47,6 +47,8 @@ alias config="git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
 alias female=man	# l'inclusivité 
 
+alias vi=vim
+
 # ---==+==---
 ##  Options
 # ---==+==---
