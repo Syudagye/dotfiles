@@ -67,6 +67,6 @@ shopt -s checkwinsize
 ##  Startup
 # ---==+==---
 
-poggers
+#poggers
 #neofetch --color_blocks off | lolcat	# Absolute necessity
 eval "$(starship init bash)"		# Starts the starship prompt
