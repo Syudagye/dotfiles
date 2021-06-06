@@ -1,7 +1,7 @@
 modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
-tags = ["dev", "web", "game", "1", "2", "3", "4", "5", "6", "social"]
+tags = ["dev", "web", "game", "4", "5", "6", "7", "8", "9", "social"]
 layouts = [
 	"MainAndVertStack", 
 	"MainAndHorizontalStack", 
@@ -224,7 +224,7 @@ key = "ccedilla"
 
 [[keybind]]
 command = "GotoTag"
-value = "11"
+value = "10"
 modifier = ["modkey"]
 key = "dollar"
 
