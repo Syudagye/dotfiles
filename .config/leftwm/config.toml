@@ -52,6 +52,20 @@ value = "maim -suB | tee ~/Images/Screenshots/$(date +%s).png | xclip -t image/p
 modifier = ["modkey", "Shift"]
 key = "s"
 
+# Volume Control
+
+[[keybind]]
+command = "Execute"
+value = "sh ~/.config/leftwm/volume.sh 2"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
+command = "Execute"
+value = "sh ~/.config/leftwm/volume.sh -2"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
 #
 # WM Controls
 #
