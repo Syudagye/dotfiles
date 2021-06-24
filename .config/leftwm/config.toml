@@ -1,11 +1,10 @@
 modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
-tags = ["dev", "web", "game", "4", "5", "6", "7", "8", "9", "social"]
+tags = ["dev", "web", "game", "4", "5", "6", "7", "vm", "dl", "social"]
 layouts = [
 	"MainAndVertStack", 
 	"MainAndHorizontalStack", 
-	"MainAndDeck", 
 	"Fibonacci", 
 	"Monocle", 
 ]
