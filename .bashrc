@@ -21,7 +21,7 @@
 ##    Env
 # ---==+==---
 
-export PATH="$HOME/.local/bin:$PATH"
+[ -f "~/.config/lf/icons" ] && source "~/.config/lf/icons"
 
 # ---==+==---
 ##  Aliases
