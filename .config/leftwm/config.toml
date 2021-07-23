@@ -154,28 +154,46 @@ modifier = ["modkey"]
 key = "j"
 
 #
+# Main window size
+#
+
+[[keybind]]
+command = "IncreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Control"]
+key = "Up"
+
+[[keybind]]
+command = "IncreaseMainWidth"
+value = "5"
+modifier = ["modkey"]
+key = "l"
+
+[[keybind]]
+command = "DecreaseMainWidth"
+value = "5"
+modifier = ["modkey", "Control"]
+key = "Down"
+
+[[keybind]]
+command = "DecreaseMainWidth"
+value = "5"
+modifier = ["modkey"]
+key = "h"
+
+#
 # Layouts
 #
 
 [[keybind]]
 command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "Up"
-
-[[keybind]]
-command = "NextLayout"
 modifier = ["modkey"]
-key = "l"
-
-[[keybind]]
-command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "Down"
+key = "equal"
 
 [[keybind]]
 command = "PreviousLayout"
 modifier = ["modkey"]
-key = "h"
+key = "parenright"
 
 #
 # Tags
