@@ -102,10 +102,6 @@ cmd zip ${{
 # Sets
 set drawbox
 set icons
-set numbers
 set info size:time
 set number
 set relativenumber
-
-# Mappings
-map H :set hidden!
