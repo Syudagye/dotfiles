@@ -57,6 +57,8 @@ shopt -s histappend	# Enable history appending instead of overwriting.  #139609
 shopt -s expand_aliases
 shopt -s checkwinsize
 
+set -o vi
+
 # ---==+==---
 ## Functions
 # ---==+==---
