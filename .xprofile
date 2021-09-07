@@ -2,6 +2,6 @@
 
 udiskie -ans &
 mictray &
-steam -silent &
+steam-native -silent &
 discord --start-minimized &
 polkit-dumb-agent &
