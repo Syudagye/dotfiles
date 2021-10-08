@@ -5,3 +5,4 @@ mictray &
 steam-native -silent &
 discord --start-minimized &
 polkit-dumb-agent &
+keepassxc &
