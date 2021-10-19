@@ -35,7 +35,7 @@ alias more=less
 alias nuget="mono /usr/local/bin/nuget.exe"
 alias rpicom="picom -b --config ~/.config/picom/picom.conf"
 alias rbar="~/.config/polybar/launch.sh detach"
-alias ls='exa -l --git'
+alias ls='exa -l --git --icons'
 alias la='ls -a'
 alias lg='ls --git-ignore'
 alias grep='grep --colour=auto'
