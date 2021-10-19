@@ -54,6 +54,7 @@ call plug#begin()
     Plug 'hrsh7th/vim-vsnip'
     Plug 'onsails/lspkind-nvim'
     Plug 'weilbith/nvim-code-action-menu'
+    Plug 'plugin/auto-pairs.vim'
 
     Plug 'kosayoda/nvim-lightbulb' " Not working ;w;
 
