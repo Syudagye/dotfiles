@@ -54,7 +54,7 @@ call plug#begin()
     Plug 'hrsh7th/vim-vsnip'
     Plug 'onsails/lspkind-nvim'
     Plug 'weilbith/nvim-code-action-menu'
-    Plug 'plugin/auto-pairs.vim'
+    Plug 'jiangmiao/auto-pairs'
 
     Plug 'kosayoda/nvim-lightbulb' " Not working ;w;
 
@@ -64,6 +64,11 @@ call plug#begin()
     " Rust
     Plug 'nvim-lua/plenary.nvim'
     Plug 'saecki/crates.nvim'
+    Plug 'rust-lang/rust.vim'
+
+    let g:rustfmt_autosave = 1
+    let g:rustfmt_emit_files = 1
+    let g:rustfmt_fail_silently = 0
 
     """ For later
     "nvim-lua/lsp-status.nvim

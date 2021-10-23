@@ -10,11 +10,12 @@ layouts = [
 ]
 disable_current_tag_swap = true
 focus_behaviour = "Driven"
+#focus_behaviour = "ClickTo"
 #focus_behaviour = "Sloppy"
 focus_new_windows = true
 
 keybind = [
-    { command = "Execute", value = "rofi -show run", modifier = ["modkey", "Shift"], key = "d" },
+    { command = "Execute", value = "rofi -show drun", modifier = ["modkey"], key = "d" },
     { command = "Execute", value = "alacritty", modifier = ["modkey"], key = "Return" },
     { command = "ToggleScratchPad", value = "Alacritty", modifier = ["modkey"], key = "s" },
     { command = "Execute", value = "maim -suB | tee ~/Images/Screenshots/$(date +%s).png | xclip -t image/png -selection clipboard", modifier = ["modkey", "Shift"], key = "s" },
