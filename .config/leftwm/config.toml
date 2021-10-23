@@ -14,6 +14,10 @@ focus_behaviour = "Driven"
 #focus_behaviour = "Sloppy"
 focus_new_windows = true
 
+scratchpad = [
+    { name = "Alacritty", value = "alacritty" },
+]
+
 keybind = [
     { command = "Execute", value = "rofi -show drun", modifier = ["modkey"], key = "d" },
     { command = "Execute", value = "alacritty", modifier = ["modkey"], key = "Return" },
@@ -69,7 +73,3 @@ keybind = [
     { command = "MoveToTag", value = "9", modifier = ["modkey", "Shift"], key = "ccedilla" },
     { command = "MoveToTag", value = "10", modifier = ["modkey", "Shift"], key = "dollar" },
 ]
-
-[[scratchpad]]
-name = "Alacritty"
-value = "alacritty"
