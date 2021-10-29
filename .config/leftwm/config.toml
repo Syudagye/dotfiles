@@ -3,20 +3,29 @@ mousekey = "Mod4"
 workspaces = []
 tags = ["dev", "web", "game", "draw", "5", "6", "vid", "vm", "dl", "social"]
 layouts = [
-	"MainAndVertStack", 
-	"MainAndHorizontalStack", 
-	"Fibonacci", 
-	"Monocle", 
+    "MainAndVertStack",
+    "MainAndHorizontalStack",
+    "MainAndDeck",
+    #"GridHorizontal",
+    #"EvenHorizontal",
+    #"EvenVertical",
+    "Fibonacci",
+    #"CenterMain",
+    #"CenterMainBalanced",
+    "Monocle",
+    #"RightWiderLeftStack",
+    #"LeftWiderRightStack",
 ]
 disable_current_tag_swap = true
 focus_behaviour = "Driven"
 #focus_behaviour = "ClickTo"
 #focus_behaviour = "Sloppy"
 focus_new_windows = true
+layout_mode = "Tag"
 
 scratchpad = [
     { name = "Alacritty", value = "alacritty" },
-    { name = "htop", value = "alacritty -e htop", x = 100, y = 100, width = 800, height = 600 },
+    { name = "htop", value = "alacritty -e htop", x = 100, y = 100, width = 1000, height = 600 },
 ]
 
 keybind = [
@@ -41,7 +50,7 @@ keybind = [
     { command = "MoveWindowDown", modifier = ["modkey", "Shift"], key = "j" },
     { command = "MoveWindowTop", modifier = ["modkey", "Shift"], key = "Return" },
     { command = "ToggleFullScreen", modifier = ["modkey"], key = "f" },
-    { command = "FloatingToTile", modifier = ["modkey", "Shift"], key = "t" },
+    { command = "ToggleFloating", modifier = ["modkey", "Shift"], key = "space" },
     { command = "FocusWindowUp", modifier = ["modkey"], key = "Up" },
     { command = "FocusWindowUp", modifier = ["modkey"], key = "k" },
     { command = "FocusWindowDown", modifier = ["modkey"], key = "Down" },
