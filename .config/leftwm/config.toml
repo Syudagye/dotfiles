@@ -32,8 +32,9 @@ keybind = [
     { command = "Execute", value = "rofi -show drun", modifier = ["modkey"], key = "d" },
     { command = "Execute", value = "alacritty", modifier = ["modkey"], key = "Return" },
     { command = "Execute", value = "maim -suB | tee ~/Images/Screenshots/$(date +%s).png | xclip -t image/png -selection clipboard", modifier = ["modkey", "Shift"], key = "s" },
-    { command = "Execute", value = "sh ~/.config/leftwm/volume.sh 2", modifier = [], key = "XF86XK_AudioRaiseVolume" },
-    { command = "Execute", value = "sh ~/.config/leftwm/volume.sh -2", modifier = [], key = "XF86XK_AudioLowerVolume" },
+    { command = "Execute", value = "volume 2", modifier = [], key = "XF86XK_AudioRaiseVolume" },
+    { command = "Execute", value = "volume -2", modifier = [], key = "XF86XK_AudioLowerVolume" },
+    { command = "Execute", value = "volume mute", modifier = [], key = "XF86XK_AudioMute" },
     { command = "ToggleScratchPad", value = "Alacritty", modifier = ["modkey"], key = "s" },
     { command = "ToggleScratchPad", value = "htop", modifier = ["modkey"], key = "F1" },
 

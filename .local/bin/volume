@@ -1,0 +1,22 @@
+#!/bin/bash
+
+changeVolume()
+{
+    MAX=100
+    vol=$(pulseaudio-ctl full-status)
+    newvol=$((${vol:0:3} + $1))
+    
+    [ $newvol -le $MAX ] && pulseaudio-ctl set $newvol
+}
+
+notifyVolume()
+{
+    IFS=' ' read -ra status <<< "$(pulseaudio-ctl full-status)"
+    msg="Volume: ${status[0]}%"
+    [ "${status[1]}" = "yes" ] && msg+=" (Muted)"
+    
+    dunstify -a "changeVolume" -u low -i audio-volume-high -h int:value:"${status[0]}" -r "69420" "$msg"
+}
+
+[ "$1" = "mute" ] && pulseaudio-ctl mute || changeVolume "$1"
+notifyVolume
