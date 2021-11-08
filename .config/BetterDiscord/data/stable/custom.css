@@ -1,0 +1,5 @@
+:root {
+    --main-color: #e68d27; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #b3611e; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--background-image: url(https://i.pinimg.com/originals/3e/00/2a/3e002ac4af234fc14658ab188e3eaa5b.png)
+}
