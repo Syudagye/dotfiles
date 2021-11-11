@@ -28,7 +28,7 @@ format = " ([\\[$all_status$ahead_behind\\]]($style))"
 format = " ❯ [$symbol$version]($style)"
 
 [status]
-format = ' ❯ exit code [$status]($style) \([$common_meaning]($style)\)'
+format = ' ❯ exit code [$status]($style)( \([$common_meaning]($style)\))'
 disabled = false
 
 [cmd_duration]
