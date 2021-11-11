@@ -43,6 +43,8 @@ call plug#begin()
 
     Plug 'akinsho/toggleterm.nvim'
 
+    Plug 'chrisbra/Colorizer'
+
     """ LSP and completion
     Plug 'neovim/nvim-lspconfig'
     "Plug 'glepnir/lspsaga.nvim'
