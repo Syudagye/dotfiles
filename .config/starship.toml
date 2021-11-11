@@ -1,13 +1,9 @@
-format = """
-$time$git_branch$nodejs$python$java$package$cmd_duration
-$username $directory(blue)[❯](bold green) """
+format = """$time$git_branch$git_status$package$rust$docker_context$status$cmd_duration\n$directory(blue)$character"""
 
-[username]
-style_user = "fg:202 bold"
-style_root = "red bold"
-format = "[$user]($style)"
-disabled = false
-show_always = true
+[character]
+success_symbol = "[❯](green bold)"
+error_symbol = "[❯](red bold)"
+vicmd_symbol = "[V](green bold)" # not wirking idk why
 
 [time]
 disabled = false
@@ -19,17 +15,21 @@ utc_time_offset = "+1"
 [git_branch]
 format = " ❯ [$symbol$branch](bold red)"
 
-[nodejs]
-format = " ❯ [$symbol$version](bold green)"
-
-[python]
-format = " ❯ [$symbol$version](fg:40)"
-
-[java]
-format = " ❯ [$symbol$version](bold)"
-
 [package]
 format = " ❯ [$symbol$version]($style)"
+
+[docker_context]
+format = " ❯ [$symbol$context]($style)"
+
+[git_status]
+format = " ([\\[$all_status$ahead_behind\\]]($style))"
+
+[rust]
+format = " ❯ [$symbol$version]($style)"
+
+[status]
+format = ' ❯ exit code [$status]($style) \([$common_meaning]($style)\)'
+disabled = false
 
 [cmd_duration]
 format = " ❯ took [$duration]($style)"
