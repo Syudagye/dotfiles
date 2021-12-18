@@ -4,4 +4,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim"
 
-lefthk &
+if [ -x "$(command -v rclone)" ]; then
+    rclone mount GoogleDrive: $HOME/Documents/GoogleDrive &
+fi
