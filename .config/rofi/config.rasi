@@ -3,7 +3,7 @@ configuration {
 	show-icons: true;
 	terminal: "termite";
 	scroll-method: 1;
-	theme: "syuTheme";
+/*	theme: "syuTheme";*/
 	sidebar-mode: true;
 }
 /* vim:ft=css
