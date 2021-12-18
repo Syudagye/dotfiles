@@ -13,8 +13,11 @@ set cursorline
 set hidden
 set shortmess+=c
 set mouse=nv
+set guifont=iosevka:h10
+set smartindent
 
 let mapleader = " "
+let g:neovide_transparency=0.8
 
 
 """ Plugins
@@ -45,6 +48,8 @@ call plug#begin()
 
     Plug 'chrisbra/Colorizer'
 
+    Plug 'mhinz/vim-startify'
+
     """ LSP and completion
     Plug 'neovim/nvim-lspconfig'
     "Plug 'glepnir/lspsaga.nvim'
@@ -72,6 +77,11 @@ call plug#begin()
     let g:rustfmt_emit_files = 1
     let g:rustfmt_fail_silently = 0
 
+    " LaTeX
+    Plug 'lervag/vimtex'
+
+    " Yuck
+    Plug 'elkowar/yuck.vim'
     """ For later
     "nvim-lua/lsp-status.nvim
 
@@ -124,6 +134,12 @@ nmap        s   <Plug>(vsnip-select-text)
 xmap        s   <Plug>(vsnip-select-text)
 nmap        S   <Plug>(vsnip-cut-text)
 xmap        S   <Plug>(vsnip-cut-text)
+
+
+""" VimTeX
+filetype plugin indent on
+let g:vimtex_view_method = 'zathura'
+let maplocalleader = ','
 
 
 """ Keybinds

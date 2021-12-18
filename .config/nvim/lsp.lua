@@ -32,15 +32,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<leader>F', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
---vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---  vim.lsp.diagnostic.on_publish_diagnostics, {
---    virtual_text = true,
---    signs = true,
---    update_in_insert = true,
---  severity_sort = true
---  }
---)
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.textDocument.completion.completionItem.resolveSupport = {
@@ -51,23 +42,10 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   }
 }
 
---lspconfig.rls.setup {
---    capabilities = capabilities,
---    on_attach = on_attach
---}
-lspconfig.rust_analyzer.setup {
-  capabilities = cmp_nvim_lsp.update_capabilities(capabilities),
-  on_attach = on_attach
-}
-lspconfig.vimls.setup {
-  capabilities = cmp_nvim_lsp.update_capabilities(capabilities),
-  on_attach = on_attach
-}
-
---vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---  vim.lsp.diagnostic.on_publish_diagnostics, {
---    virtual_text = true,
---    signs = true,
---    update_in_insert = true,
---  }
---)
+local servers = { 'rust_analyzer', 'vimls', 'texlab', 'csharp_ls', 'pylsp'}
+for _, ls in ipairs(servers) do 
+  lspconfig[ls].setup {
+    capabilities = cmp_nvim_lsp.update_capabilities(capabilities),
+    on_attach = on_attach
+  }
+end
