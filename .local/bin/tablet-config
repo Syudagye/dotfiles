@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# My tablet configuration for Wacom Intuos S
+
+# Button mappings
+xsetwacom set "Wacom Intuos S Pen stylus" Button 8 "key +ctrl z -ctrl"
+
+# Area setup
+xsetwacom set "Wacom Intuos S Pen stylus" Area 0 0 15200 9500
+[ "$1" = "osu" ] && xsetwacom set "Wacom Intuos S Pen stylus" Area 3800 2613 11400 6888
+[ "$1" = "osu-topleft" ] && xsetwacom set "Wacom Intuos S Pen stylus" Area 0 0 7600 4275
