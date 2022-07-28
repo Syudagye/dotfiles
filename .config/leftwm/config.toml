@@ -18,14 +18,19 @@ layouts = [
 ]
 disable_current_tag_swap = true
 #focus_behaviour = "Driven"
-focus_behaviour = "ClickTo"
-#focus_behaviour = "Sloppy"
+#focus_behaviour = "ClickTo"
+focus_behaviour = "Sloppy"
+sloppy_mouse_follows_focus = false
 focus_new_windows = true
 layout_mode = "Tag"
 
 scratchpad = [
     { name = "Alacritty", value = "alacritty" },
     { name = "htop", value = "alacritty -e htop", x = 100, y = 100, width = 1000, height = 600 },
+]
+
+window_rules = [
+    { window_class = "Steam", spawn_on_tag = 5 },
 ]
 
 keybind = [
