@@ -1,0 +1,5 @@
+#!/bin/sh
+lefthk &
+udiskie -ans &
+#noisetorch -i &
+tablet-config
