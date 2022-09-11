@@ -1,0 +1,35 @@
+Config(
+    keybinds: [
+        Keybind(
+            command: Execute("volume 2"),
+            modifier: [],
+            key: Key("XF86XK_AudioRaiseVolume"),
+        ),
+        Keybind(
+            command: Execute("volume -2"),
+            modifier: [],
+            key: Key("XF86XK_AudioLowerVolume"),
+        ),
+        Keybind(
+            command: Execute("volume mute"),
+            modifier: [],
+            key: Key("XF86XK_AudioMute"),
+        ),
+        Keybind(
+            command: Execute("maim -B | tee $HOME/Images/Screenshots/$(date +Screeshot_%+4Y-%m-%d_%H-%M-%S).png | xclip -t image/png -selection clipboard"),
+            modifier: ["Mod4", "Shift"],
+            key: Key("s"),
+        ),
+        Keybind(
+            command: Chord([
+                Keybind(
+                    command: Execute("alacritty -e htop"),
+                    modifier: ["Mod4"],
+                    key: Key("u"),
+                ),
+            ]),
+            modifier: ["Mod4"],
+            key: Key("c"),
+        ),
+    ]
+)
